@@ -1,0 +1,4 @@
+configuration:
+  auto_update:
+    name: 自动更新
+    description: 预留选项；当前版本不执行自动更新。
