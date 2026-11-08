@@ -1,0 +1,16 @@
+name: "YouTube Music Free Provider"
+description: "Restore YouTube Music Free provider in Music Assistant after container recreation"
+version: "1.0.0"
+slug: "ytmusic_free"
+url: "https://github.com/Yunlliang/ytmusic-free-ha-addon"
+init: false
+boot: auto
+startup: services
+docker_api: true
+arch:
+  - amd64
+  - aarch64
+options:
+  auto_update: false
+schema:
+  auto_update: bool
