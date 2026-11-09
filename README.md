@@ -34,6 +34,16 @@
 3. 在加载项信息页关闭 **保护模式**，启动并查看日志。
 4. 在 Music Assistant **设置 → 音乐源** 添加 **YouTube Music (Free)**。
 
+## 使用方法（免登录与 Cookie 授权）
+
+- **免登录**：在 Music Assistant 添加 **YouTube Music (Free)** 音乐源，不填写 Cookie 即可尝试公开搜索和播放。
+- **授权同步**：在电脑浏览器登录 [YouTube Music](https://music.youtube.com)，按 `F12` → **Network → Fetch/XHR**，刷新页面，点击已完成的 `account_menu` 或 `browse` 请求，在 **Headers → Request Headers** 找到 `cookie`，复制完整值（不包含 `Cookie:`）。
+- 在 Music Assistant 音乐源配置中选择 **Authentication: Browser cookie**，粘贴到 **Cookie header**；普通账户 **Brand account ID** 留空，**Account index** 保持 `0`，然后保存。
+- 在 **同步/导入选项** 中勾选要同步的资料库项目，之后检查歌曲、播放列表、推荐和播客。保存后不一定有成功弹窗。
+- **安全**：Cookie 是敏感登录凭证，切勿分享到聊天、截图或 GitHub。
+
+**[查看完整中文使用教程（含截图操作位置、配置说明与故障排查）](ytmusic_free/DOCS.md)**
+
 ## 跟随上游更新
 
 - 默认 `auto_update: false`：首次下载并缓存上游版本；Music Assistant 容器重建后自动恢复缓存版本。
